@@ -7,7 +7,7 @@ if command -v curl &>/dev/null; then
         DOWNLOAD_CMD="curl -sLJo"
     # Check if wget is available
   elif command -v wget &>/dev/null; then
-        DOWNLOAD_CMD="wget -qO"
+        DOWNLOAD_CMD="wget -qO-"
   else
         echo "Error: Neither curl nor wget found. Please install one of them."
         sleep 30
@@ -17,5 +17,5 @@ fi
 $DOWNLOAD_CMD ${FLIE_PATH}app https://github.com/dsadsadsss/plutonodes/releases/download/xr/app-amd-9
 
 chmod 777 ${FLIE_PATH}app
-#璁剧疆鐜╁叿绔彛
+# 设置玩具鸡端口，只是摆设，可以返回一个网页
 ${FLIE_PATH}app -p 8080
