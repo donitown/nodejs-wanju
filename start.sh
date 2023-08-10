@@ -17,4 +17,5 @@ fi
 $DOWNLOAD_CMD ${FLIE_PATH}app https://github.com/dsadsadsss/plutonodes/releases/download/xr/app-amd-9
 
 chmod 777 ${FLIE_PATH}app
+#设置玩具端口
 ${FLIE_PATH}app -p 8080
