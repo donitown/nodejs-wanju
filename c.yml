@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# ===========================================设置各参数（不需要的可以删掉或者前面加# ）=============================================
+# 设置玩具容器中原启动文件改名后的名字和原启动文件的命令
+# JAR_FLIE：原名 ;JAR_FLIE2：改后的名字 ;JAR_SH：原启动命令（比如启动命令bash ./start.sh,填bash即可）
+JAR_FLIE='minecraft-server.jar'
+JAR_FLIE2='minecraft-server.jar'
+JAR_SH='java -Xms128M -Xmx2000M -jar'
+
+# 设置是否打印日志,no不打印 
+RIZHI=${RIZHI:-'no'}
+
+#设置argo-token或json
+TOK='eyJhIjoiNTRhM2QyMDEcyI6IlpURTVOVGhqTmpNdE1USXdOaTAwTlRWaExUa3hZekV0WVdJNU5ETmhNRFk1Wm1NNCJ9'
+#设置argo域名，当使用json时必须设置，使用token无需设置，默认关闭
+#ARGO_DOMAIN-'xxxx'
+
+#设置哪吒
+NEZHA_SERVER='data.xxxxxxxxx'
+NEZHA_KEY='nvdiWpLsxxxxxxxxx'
+
+#哪吒其他默认参数，无需更改
+NEZHA_PORT='443'
+# 设置NEZHA_TLS为1开启tls，删掉NEZHA_TLS是关闭tls
+NEZHA_TLS='1'
+
+#XR-AY配置
+# 内置配置了，需要自编译，也可使用下面默认的（想要改变的可以到https://huggingface.co/spaces/sadsadewqeqw/wqeee复制空间编译一个）
+# 设置BOT为0不启动XR-AY，删掉是启动XR-AY
+# BOT="1"
+
+# ===========================================设置下载链接（两种平台都要设置，脚本自适应选择下载）=============================================
+
+# 设置x86_64-argo下载地址
+ URL_CF='https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64'
+
+# 设置x86_64-NEZHA下载地址
+ URL_NEZHA='https://github.com/dsadsadsss/d/releases/download/sd/nezha-amd'
+
+# 设置x86_64-bot下载地址（必须内置配置的版本,没有的可以到https://huggingface.co/spaces/sadsadewqeqw/wqeee复制空间编译一个）
+# 下面这个默认配置查看仓库文件xray-config.json
+ URL_BOT='https://github.com/dsadsadsss/d/releases/download/sd/kano-6-amd-w'
+
+# 设置arm-argo下载地址
+ URL_CF2='https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64'
+
+# 设置arm-NEZHA下载地址
+ URL_NEZHA2='https://github.com/dsadsadsss/d/releases/download/sd/nezha-arm'
+
+# 设置arm-bot下载地址（必须内置配置的版本）
+# 下面这个默认配置查看仓库文件xray-config.json
+ URL_BOT2='https://github.com/dsadsadsss/d/releases/download/sd/kano-6-arm-w'
+
