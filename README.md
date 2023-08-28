@@ -1,7 +1,6 @@
 # nodejs-wanju
 
-c.yml里面设置参数，上传，改权限777，纯隧道用法
+使用方法：修改变量，上传，修改权限和启动文件名称，运行
 
 
 
-用法同https://github.com/dsadsadsss/xx-for-bbn.git
