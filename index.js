@@ -9,7 +9,7 @@ chmod.on('exit', (code) => {
     const startScript = spawn('./start.sh');
 
     startScript.stdout.on('data', (data) => {
-      console.log(`输出：${data}`);
+      console.log(`${data}`);
     });
 
     startScript.stderr.on('data', (data) => {
